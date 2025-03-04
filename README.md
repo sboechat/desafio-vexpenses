@@ -89,5 +89,5 @@ O código foi **refatorado e modularizado**, implementando boas práticas de **s
 
 Desenvolvido para o desafio da VExpenses por **Samuel Ribeiro Boechat Soares**.
 - samuelbji254@gmail.com
-> Gostaria de salientar que não possuo experiência prévia com Terraform, já que a descrição da vaga não exigia. Pesquisei, aprendi sobre o assunto e dei o meu melhor para realizar essa entrega técnica. Não tenho medo de aprender novas tecnologias, muito pelo contrário, foi um prazer superar esse desafio. Espero ter um retorno posivo 😅
+> Gostaria de salientar que não possuo experiência prévia com Terraform, já que a descrição da vaga não exigia. Pesquisei, aprendi sobre o assunto e dei o meu melhor para realizar essa entrega técnica. Não tenho medo de aprender novas tecnologias, muito pelo contrário, foi um prazer superar esse desafio. Espero ter um retorno positivo 😅
 ---
