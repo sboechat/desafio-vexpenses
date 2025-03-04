@@ -32,11 +32,12 @@ O código foi **refatorado e modularizado**, implementando boas práticas de **s
 
 - Código dividido em `main.tf`, `variables.tf`, `outputs.tf` e `nginx.sh` para organização clara.
 - Valores fixos substituídos por **variáveis configuráveis** em `variables.tf`.
-- Uso de **User Data** para instalação automática do Nginx ao iniciar a instância.
+- Uso de **User Data** para instalação automática do Nginx executando o script `nginx.sh` ao iniciar a instância.
 - Outputs para exibir IP público e URL de acesso ao Nginx no final do `terraform apply`.
+- Removido o output que exibia a chave privada para uma maior segurança.
 - Boas práticas com a adição de **tags** para melhor identificação da instância no console AWS.
 - Algumas correções de sintaxe, por exemplo, o recurso `aws_route_table_association` não suporta a propriedade `tags`.
-- Security Group configurável (porta SSH restrita via variável `allowed_ssh_cidr`). Além de ter removido o output que exibia a chave privada.
+- Security Group configurável (porta SSH restrita via variável `allowed_ssh_cidr`). 
 > Obs.: A variável `allowed_ssh_cidr` está configurada com um IP fixo irreal para exemplificar.
 ---
 
@@ -47,7 +48,7 @@ O código foi **refatorado e modularizado**, implementando boas práticas de **s
 | Modularização   | O código foi dividido em mais arquivos para facilitar a manutenção, leitura e reutilização em projetos reais.|
 | Variáveis        | Evita hardcoded e permite customização para diferentes ambientes.                                  |
 | Segurança       | Minimiza riscos ao permitir restrição de acesso SSH (idealmente apenas para o IP do desenvolvedor). |
-| Automação       | Permite provisionamento de servidores já configurados e prontos para uso (Infraestrutura Imutável). |
+| Automação       | Permite provisionamento de servidores já configurados e prontos para uso com o nginx (Infraestrutura Imutável). |
 
 
 ---
@@ -56,8 +57,8 @@ O código foi **refatorado e modularizado**, implementando boas práticas de **s
 
 ### Pré-requisitos
 
-- Conta AWS configurada (credenciais em `~/.aws/credentials`).
-- Terraform instalado (`>= 1.3`).
+- Conta AWS corretamente configurada.
+- Terraform instalado.
 
 ### Instruções de uso
  - Clone o repositório git: 
@@ -88,6 +89,5 @@ O código foi **refatorado e modularizado**, implementando boas práticas de **s
 
 Desenvolvido para o desafio da VExpenses por **Samuel Ribeiro Boechat Soares**.
 - samuelbji254@gmail.com
-
+> Gostaria de salientar que não possuo experiência prévia com Terraform, já que a descrição da vaga não exigia. Pesquisei, aprendi sobre o assunto e dei o meu melhor para realizar essa entrega técnica. Não tenho medo de aprender novas tecnologias, muito pelo contrário, foi um prazer superar esse desafio. Espero ter um retorno posivo 😅
 ---
-
