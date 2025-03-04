@@ -32,12 +32,12 @@ O código foi **refatorado e modularizado**, implementando boas práticas de **s
 
 - Código dividido em `main.tf`, `variables.tf`, `outputs.tf` e `nginx.sh` para organização clara.
 - Valores fixos substituídos por **variáveis configuráveis** em `variables.tf`.
-- Security Group configurável (porta SSH restrita via variável `allowed_ssh_cidr`). Além de ter removido o output que exibia a chave privada.
 - Uso de **User Data** para instalação automática do Nginx ao iniciar a instância.
 - Outputs para exibir IP público e URL de acesso ao Nginx no final do `terraform apply`.
 - Boas práticas com a adição de **tags** para melhor identificação da instância no console AWS.
 - Algumas correções de sintaxe, por exemplo, o recurso `aws_route_table_association` não suporta a propriedade `tags`.
-
+- Security Group configurável (porta SSH restrita via variável `allowed_ssh_cidr`). Além de ter removido o output que exibia a chave privada.
+> Obs.: A variável `allowed_ssh_cidr` está configurada com um IP fixo irreal para exemplificar.
 ---
 
 ### Justificativa Técnica
@@ -60,7 +60,7 @@ O código foi **refatorado e modularizado**, implementando boas práticas de **s
 - Terraform instalado (`>= 1.3`).
 
 ### Instruções de uso
- - Clone o repositório git: ``
+ - Clone o repositório git: 
  
     ```bash
     git clone https://github.com/sboechat/desafio-vexpenses

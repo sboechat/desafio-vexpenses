@@ -36,8 +36,8 @@ variable "instance_type" {
 }
 
 variable "allowed_ssh_cidr" {
-  description = "Faixa de IP permitida para SSH"
-  default     = "123.456.789.101/24" // IP específico do desenvolvedor imaginário.
+  description = "IP permitido para acesso SSH"
+  default     = "123.456.789.101/24" // IP específico do desenvolvedor.
 }
 
 variable "igw_cidr" {
